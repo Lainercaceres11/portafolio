@@ -1,0 +1,64 @@
+---
+import "./Navbar.css";
+---
+
+<nav>
+  <div class="navbar">
+    <span class="navbar-text">
+      <span class="navbar-text__dev">Dev</span>Folio</span
+    >
+    <ul class="navbar-link">
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Sobre mí</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Habilidades</a></li>
+      <li><a href="#">Educación</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <div class="navbar-actions">
+      <a
+        target="_blank"
+        href="https://wa.me/573146486981"
+        class="btn-primary navbar-button">Hablemos</a
+      >
+      <button class="navbar-btn-hamburguer" aria-label="Toggle menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-menu-icon lucide-menu"
+          ><path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbarBtnHamburguer = document.querySelector(
+      ".navbar-btn-hamburguer",
+    );
+
+    const navbarLink = document.querySelector(".navbar-link");
+    const allLinks = document.querySelectorAll(".navbar-link li a");
+
+    navbarBtnHamburguer?.addEventListener("click", () => {
+      navbarLink?.classList.toggle("active");
+    });
+
+    allLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        navbarLink?.classList.remove("active");
+      });
+    });
+  });
+</script>

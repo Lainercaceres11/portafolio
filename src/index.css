@@ -1,0 +1,88 @@
+:root {
+  --background: #f8fafc;
+  --foreground: #1a1f2b;
+  --card: #f1f4f7;
+  --card-foreground: #1a1f2b;
+  --popover: #f8fafc;
+  --popover-foreground: #1a1f2b;
+  --primary: #0f766e;
+  --primary-foreground: #ffffff;
+  --secondary: #e6e9ed;
+  --secondary-foreground: #333a47;
+  --muted: #eceff3;
+  --muted-foreground: #6b7280;
+  --accent: #0f766e;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #f8fafc;
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0f766e;
+  --radius: 0.75rem;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --sidebar-background: #fafafa;
+  --sidebar-foreground: #3f3f46;
+  --sidebar-primary: #18181b;
+  --sidebar-primary-foreground: #fafafa;
+  --sidebar-accent: #f4f4f5;
+  --sidebar-accent-foreground: #18181b;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #3b82f6;
+}
+
+.dark {
+  --background: #0f1117;
+  --foreground: #e5e7eb;
+  --card: #161a22;
+  --card-foreground: #e5e7eb;
+  --popover: #0f1117;
+  --popover-foreground: #e5e7eb;
+  --primary: #14b8a6;
+  --primary-foreground: #042f2e;
+
+  --accent: #14b8a6;
+  --accent-foreground: #042f2e;
+
+  --ring: #14b8a6;
+  --secondary: #232830;
+  --secondary-foreground: #d1d5db;
+  --muted: #232830;
+  --muted-foreground: #9ca3af;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #f8fafc;
+  --border: #3b2f2a;
+  --input: #3b2f2a;
+  --ring: #f97316;
+  --sidebar-background: #18181b;
+  --sidebar-foreground: #f4f4f5;
+  --sidebar-primary: #2563eb;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #27272a;
+  --sidebar-accent-foreground: #f4f4f5;
+  --sidebar-border: #27272a;
+  --sidebar-ring: #3b82f6;
+}
+
+body {
+  color-scheme: light dark;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--inter);
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-radius: 16px;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  border: none;
+  font-size: 0.8em;
+
+
+}
+
+.btn-primary:hover {
+  background-color: var(--sidebar-foreground);
+}
