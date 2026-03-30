@@ -1,0 +1,36 @@
+---
+import "./about.css";
+
+const { id } = Astro.props;
+---
+
+<section class="about" id={id}>
+  <h2 class="about-title">Sobre mí</h2>
+  <p class="about-subtitle">
+    Apasionado por la <span class="u-text-title">experiencia de usuario</span>
+  </p>
+  <div class="about-card">
+    <p class="about-card__text">
+      Soy un desarrollador frontend con más de <strong
+        >3 años de experiencia</strong
+      > creando aplicaciones web modernas.
+    </p>
+    <p class="about-card__text">
+      Me enfoco en escribir código limpio, accesible y performante que resuelve
+      problemas reales. Disfruto trabajar en equipo, aprender nuevas tecnologías
+      y compartir conocimiento.
+    </p>
+
+    <p class="about-card__text">
+      Tengo experiencia transformando diseños en productos digitales reales,
+      asegurando consistencia, usabilidad y eficiencia en cada proyecto. Me
+      enfoco en escribir código limpio, mantenible y alineado con buenas
+      prácticas, lo que permite una fácil evolución y mejora continua de las
+      aplicaciones.
+    </p>
+
+    <p class="about-card__quote">
+      "El buen diseño es invisible — simplemente funciona."
+    </p>
+  </div>
+</section>

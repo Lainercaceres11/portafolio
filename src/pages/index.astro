@@ -3,7 +3,8 @@ import "../index.css";
 import "../reset.css";
 
 import Navbar from "../components/navbar/Navbar.astro";
-import { Font } from "astro:assets";
+import Banner from "../components/banner/banner.astro";
+import About from "../components/about-us/about.astro";
 ---
 
 <html lang="en">
@@ -17,10 +18,13 @@ import { Font } from "astro:assets";
       name="description"
       content="Portafolio profesional de Lainer Cáceres Salas, desarrollador web especializado en front-end"
     />
-    <Font cssVariable="--inter" />
     <title>Portafolio</title>
   </head>
   <body>
-    <Navbar />
+    <main class="main-container">
+      <Navbar />
+      <Banner />
+      <About id="about" />
+    </main>
   </body>
 </html>

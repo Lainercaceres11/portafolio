@@ -1,0 +1,40 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4.5rem;
+}
+
+.about-title {
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    color: var(--muted-foreground);
+}
+
+.about-subtitle {
+    text-align: center;
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem;
+    max-width: 100ch;
+}
+
+.about-card__quote {
+    font-style: italic;
+    display: inline-block;
+    background-color: var(--card);
+}

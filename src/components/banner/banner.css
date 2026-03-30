@@ -1,0 +1,42 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 1rem;
+    margin-bottom: 2.5rem;
+
+    .banner-title {
+        text-transform: uppercase;
+        color: var(--primary);
+    }
+
+    .banner-description {
+        max-width: 75ch;
+    }
+
+    .banner-subtitle {
+        font-size: clamp(2.5rem, 5vw, 5rem);
+        max-width: 20ch;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+
+        span {
+            color: var(--sidebar-ring);
+        }
+    }
+
+    .banner-actions {
+        margin-top: 0.8rem;
+        display: flex;
+        gap: 1rem;
+
+        a {
+            text-decoration: none;
+        }
+
+        .btn-cv {
+            background-color: var(--background);
+            color: var(--foreground);
+            border: 2px solid var(--border);
+        }
+    }
+}
