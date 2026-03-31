@@ -4,7 +4,8 @@
     gap: 0.5rem;
     justify-content: center;
     align-items: center;
-    margin-bottom: 4.5rem;
+    min-height: 600px;
+    margin: 3.5rem 0.8rem;
 }
 
 .about-title {
@@ -29,7 +30,7 @@
     background-color: var(--card);
     border: 1px solid var(--border);
     border-radius: 8px;
-    padding: 0.5rem;
+    padding: 2rem;
     max-width: 100ch;
 }
 

@@ -4,17 +4,16 @@
     justify-content: space-between;
     align-items: center;
     border: 1px solid var(--border);
-    padding: 1rem;
     max-width: 1200px;
     border-radius: 24px;
     background-color: var(--card);
     gap: 1rem;
+    padding: 1rem;
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 9999;
     left: 50%;
     transform: translateX(-50%);
+    width: calc(100% - 2rem);
 }
 
 .navbar-actions {
@@ -65,7 +64,8 @@
 
 @media (max-width: 768px) {
     .navbar {
-        position: relative;
+        position: fixed;
+        top: 1rem;
     }
 
     .navbar-btn-hamburguer {
