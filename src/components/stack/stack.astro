@@ -1,0 +1,121 @@
+---
+import { Icon } from "astro-icon/components";
+import "./stack.css";
+
+const { id } = Astro.props;
+---
+
+<section class="stack" id={id}>
+  <span class="u-subtitle">Habilidades</span>
+  <h2 class="u-title">Stack Tecnológico</h2>
+  <p>
+    Las herramientas y tecnologías con las que trabajo día a día para crear
+    productos excepcionales
+  </p>
+
+  <div class="stack-card">
+    <div class="stack-card__item">
+      <div>
+        <Icon name="html" size={36} />
+      </div>
+      <span>HTML</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="css" size={36} />
+      </div>
+      <span>CSS</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="javascript" size={36} />
+      </div>
+      <span>JavaScript</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="typescript" size={36} />
+      </div>
+      <span>TypeScript</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="react" size={36} />
+      </div>
+      <span>React JS</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="next" size={36} />
+      </div>
+      <span>Next JS</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="astro" size={36} />
+      </div>
+      <span>Astro</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="tailwind" size={36} />
+      </div>
+      <span>Tailwind CSS</span>
+      <span>Frontend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="node" size={36} />
+      </div>
+      <span>Node js</span>
+      <span>Backend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="prisma" size={36} />
+      </div>
+      <span>Prisma</span>
+      <span>Backend</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="github" size={36} />
+      </div>
+      <span>GitHub</span>
+      <span>Herramientas</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="mongo" size={36} />
+      </div>
+      <span>Mongo DB</span>
+      <span>Base de Datos</span>
+    </div>
+
+    <div class="stack-card__item">
+      <div>
+        <Icon name="postgrest" size={36} />
+      </div>
+      <span>PostgreSQL</span>
+      <span>Base de Datos</span>
+    </div>
+  </div>
+</section>

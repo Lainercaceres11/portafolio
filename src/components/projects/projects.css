@@ -1,12 +1,6 @@
 .projects {
-    padding-inline: 0.5rem;
     padding-bottom: 2.5rem;
-
-    .projects-span {
-        color: var(--clr-card);
-        text-transform: uppercase;
-        letter-spacing: 4px;
-    }
+    padding-inline: 1rem;
 }
 
 .projects-card__container {
