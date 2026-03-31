@@ -1,0 +1,58 @@
+---
+import { Icon } from "astro-icon/components";
+import "./education.css";
+
+const education = [
+  {
+    title: "Ingeniero de Telecomunicaciones e Informática",
+    institution: "Universidad Tecnológica del Chocó",
+    location: "Chocó, Colombia",
+    period: "2017 - 2022",
+  },
+  {
+    title: "Diplomado en Desarrollo Frontend",
+    institution: "Fundación Internacional María Luisa de Moreno",
+    location: "Medellín, Colombia",
+    period: "2022",
+  },
+  {
+    title: "Curso de Desarrollo Frontend",
+    institution: "Escuela de Robótica del Chocó",
+    location: "Chocó, Colombia",
+    period: "2021 - 2022",
+  },
+  {
+    title: "Bachiller Académico",
+    institution: "Institución Educativa Gimnasio de Educación Media",
+    location: "Chocó, Colombia",
+    period: "2012 - 2016",
+  },
+];
+
+const { id } = Astro.props;
+---
+
+<section class="education" id={id}>
+  <span class="u-subtitle">Educación</span>
+  <h2 class="u-title">Formación académica</h2>
+  <article class="education-items">
+    {
+      education.map((education) => (
+        <div class="education-container">
+          <div class="education-card">
+            <div class="education-icon">
+              <Icon name="education" size={36} />
+            </div>
+            <div class="education-content">
+              <h2>{education.title}</h2>
+              <p>
+                {education.institution} <span>{education.period}</span>
+              </p>
+              <p>{education.location}</p>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </article>
+</section>

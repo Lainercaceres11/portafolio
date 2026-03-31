@@ -88,7 +88,7 @@ body {
 
 :is(.about,
   .projects,
-  .stack) {
+  .stack, .education) {
   scroll-margin-top: 100px;
 }
 

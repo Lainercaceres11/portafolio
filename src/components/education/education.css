@@ -1,0 +1,60 @@
+.education {
+    padding: 1.5rem 1rem;
+
+
+}
+
+.education-items {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    gap: 1.5rem;
+
+
+    .education-container {
+        border-radius: 16px;
+        background-color: var(--card);
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        transition: scale 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            scale: 1.02;
+        }
+
+        &:hover .education-icon {
+            background-color: var(--background);
+        }
+
+        .education-card {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            justify-content: center;
+
+
+            .education-content {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+
+                h2 {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.education-icon {
+    --size-icons: 60px;
+
+    width: var(--size-icons);
+    height: var(--size-icons);
+    border-radius: 50%;
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
