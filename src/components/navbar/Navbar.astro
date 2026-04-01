@@ -1,10 +1,13 @@
 ---
+import ToggleDarkMode from "../ToggleDarkMode.astro";
 import "./Navbar.css";
 ---
 
 <nav>
   <div class="navbar">
-    <span><span class="navbar-text__dev">Lainer</span>Dev </span>
+    <a href="#" class="navbar-brand">
+      <span><span class="navbar-text__dev">Lainer</span>Dev</span>
+    </a>
 
     <ul class="navbar-link">
       <li><a href="#">Inicio</a></li>
@@ -36,6 +39,7 @@ import "./Navbar.css";
           ></path>
         </svg>
       </button>
+      <ToggleDarkMode />
     </div>
   </div>
 

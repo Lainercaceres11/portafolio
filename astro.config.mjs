@@ -8,7 +8,7 @@ export default defineConfig({
   vite: {
     server: {
       watch: {
-        usePolling: true, // 🔥 esto arregla el hot reload
+        usePolling: true,
       },
     },
   },

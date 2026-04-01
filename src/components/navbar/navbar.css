@@ -16,14 +16,18 @@
     z-index: 999;
 }
 
+.navbar-brand {
+    .navbar-text__dev {
+        color: var(--primary);
+    }
+
+}
+
 .navbar-actions {
     display: flex;
     gap: 0.2rem;
 }
 
-.navbar-text__dev {
-    color: var(--primary);
-}
 
 .navbar-button {
     text-decoration: none;
@@ -69,6 +73,7 @@
         width: 100%;
         border-radius: 0;
         top: 0;
+        flex-wrap: nowrap;
     }
 
     .navbar-btn-hamburguer {
