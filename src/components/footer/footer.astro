@@ -1,0 +1,77 @@
+---
+import { Icon } from "astro-icon/components";
+import "./footer.css";
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-item">
+      <span> <span class="navbar-text__dev">Lainer</span>Dev </span>
+      <p>
+        Desarrollador Frontend apasionado por crear experiencias digitales
+        memorables con código limpio y diseño moderno.
+      </p>
+    </div>
+
+    <div class="footer-navigation footer-item">
+      <h2>Navegación</h2>
+      <ul>
+        <li><a href="">Inicio</a></li>
+        <li><a href="#about">Sobre mi</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#stack">Skills</a></li>
+        <li><a href="#education">Educación</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact footer-item">
+      <h2>Contacto</h2>
+
+      <div class="u-flex">
+        <Icon name="mail" size={24} />
+        <a aria-label="Email" href="mailto:lainercaceres12@gmail.com"
+          >lainercaceres12@gmail.com
+        </a>
+      </div>
+      <div class="u-flex"><Icon name="phone" size={24} /> +57 3146486981</div>
+    </div>
+
+    <div class="footer-social footer-item">
+      <h2>Redes</h2>
+      <div class="footer-social_links">
+        <div>
+          <a
+            target="_blank"
+            href="https://github.com/Lainercaceres11"
+            aria-label="github"
+            rel="noopener noreferrer"
+          >
+            <Icon name="github" size={24} />
+          </a>
+        </div>
+        <div>
+          <a
+            href="https://www.linkedin.com/in/lainer-c%C3%A1ceres-salas/"
+            aria-label="linkedin"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon name="linkedin" size={24} />
+          </a>
+        </div>
+        <div>
+          <a
+            href="mailto:lainercaceres12@gmail.com"
+            aria-label="Email"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <Icon name="mail" size={24} />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p class="footer-top">© 2026 LainerDev. Hecho con ♥️ y mucho café.</p>
+</footer>

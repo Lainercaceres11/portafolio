@@ -4,9 +4,8 @@ import "./Navbar.css";
 
 <nav>
   <div class="navbar">
-    <span class="navbar-text">
-      <span class="navbar-text__dev">Lainer</span>Dev</span
-    >
+    <span><span class="navbar-text__dev">Lainer</span>Dev </span>
+
     <ul class="navbar-link">
       <li><a href="#">Inicio</a></li>
       <li><a href="#about">Sobre mí</a></li>
@@ -14,7 +13,7 @@ import "./Navbar.css";
       <li><a href="#stack">Habilidades</a></li>
       <li><a href="#education">Educación</a></li>
     </ul>
-
+    <div class="navbar-overlay"></div>
     <div class="navbar-actions">
       <a
         target="_blank"
@@ -39,25 +38,25 @@ import "./Navbar.css";
       </button>
     </div>
   </div>
-</nav>
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbarBtnHamburguer = document.querySelector(
-      ".navbar-btn-hamburguer",
-    );
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const navbarBtnHamburguer = document.querySelector(
+        ".navbar-btn-hamburguer",
+      );
 
-    const navbarLink = document.querySelector(".navbar-link");
-    const allLinks = document.querySelectorAll(".navbar-link li a");
+      const navbarLink = document.querySelector(".navbar-link");
+      const allLinks = document.querySelectorAll(".navbar-link li a");
 
-    navbarBtnHamburguer?.addEventListener("click", () => {
-      navbarLink?.classList.toggle("active");
-    });
+      navbarBtnHamburguer?.addEventListener("click", () => {
+        navbarLink?.classList.toggle("active");
+      });
 
-    allLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        navbarLink?.classList.remove("active");
+      allLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          navbarLink?.classList.remove("active");
+        });
       });
     });
-  });
-</script>
+  </script>
+</nav>

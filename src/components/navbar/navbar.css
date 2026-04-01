@@ -13,6 +13,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 2rem);
+    z-index: 999;
 }
 
 .navbar-actions {
@@ -72,31 +73,65 @@
 
     .navbar-btn-hamburguer {
         display: block;
+        cursor: pointer;
     }
 
     .navbar-link {
         position: fixed;
         top: 0;
-        left: 0;
-        width: 100%;
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
         height: 100vh;
         background: var(--card);
-        padding: 2rem 1.5rem;
+        border-left: 1px solid var(--border);
+        padding: 5rem 2rem 2rem;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         justify-content: start;
-        gap: 1.5rem;
-        opacity: 0;
-        transform: translateY(-20px);
-        transition: all 0.3s ease;
+        gap: 2rem;
+        transition: right 0.3s ease;
         pointer-events: none;
         z-index: 9998;
+        box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
     }
 
     .navbar-link.active {
-        opacity: 1;
-        transform: translateY(0);
+        right: 0;
         pointer-events: auto;
+    }
+
+    .navbar-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9997;
+        backdrop-filter: blur(2px);
+    }
+
+    .navbar-overlay.active {
+        display: block;
+    }
+
+    .navbar-link li a {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .navbar-btn-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: transparent;
+        border: none;
+        color: var(--card-foreground);
+        cursor: pointer;
+        display: none;
+    }
+
+    .navbar-link.active .navbar-btn-close {
+        display: block;
     }
 }

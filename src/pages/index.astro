@@ -5,10 +5,11 @@ import Education from "../components/education/education.astro";
 import Navbar from "../components/navbar/Navbar.astro";
 import Stack from "../components/stack/stack.astro";
 import Projects from "../components/projects/projects.astro";
+import Contact from "../components/contact/contact.astro";
+import Footer from "../components/footer/footer.astro";
 
 import "../index.css";
 import "../reset.css";
-import Contact from "../components/contact/contact.astro";
 ---
 
 <html lang="en">
@@ -25,14 +26,17 @@ import Contact from "../components/contact/contact.astro";
     <title>Portafolio</title>
   </head>
   <body>
-    <main class="main-container">
+    <main>
       <Navbar />
-      <Banner />
-      <About id="about" />
-      <Projects id="projects" />
-      <Stack id="stack" />
-      <Education id="education" />
+      <div class="main-container">
+        <Banner />
+        <About id="about" />
+        <Projects id="projects" />
+        <Stack id="stack" />
+        <Education id="education" />
+      </div>
       <Contact />
+      <Footer />
     </main>
   </body>
 </html>
