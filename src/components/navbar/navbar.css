@@ -17,6 +17,8 @@
 }
 
 .navbar-brand {
+    text-decoration: none;
+
     .navbar-text__dev {
         color: var(--primary);
     }
