@@ -3,281 +3,165 @@ import { Icon } from "astro-icon/components";
 import "./projects.css";
 
 const { id } = Astro.props;
+
+const projects = [
+  {
+    title: "Teslo Shop",
+    description:
+      "Una tienda online de productos con funcionalidades de carrito de compras, autentificación, ordenes y gestión de productos.",
+    stack: [
+      "Next JS",
+      "Next Auth",
+      "Typescript",
+      "Tailwind CSS",
+      "Cloudinary",
+      "Swiper",
+      "PostgreSQL",
+      "Prisma",
+    ],
+    demo: "https://teslo-shop-next-inky.vercel.app/",
+    code: "https://github.com/Lainercaceres11/teslo-shop-next",
+  },
+  {
+    title: "Chat Fullstack App",
+    description:
+      "Aplicación web de chat en tiempo real desarrollada con React + TypeScript en el frontend y Node.js + Express en el backend, utilizando Socket.io para comunicación en tiempo real. Incluye sistema de autenticación, chats privados, estado de usuarios en línea y mensajería instantánea.",
+    stack: [
+      "React JS",
+      "React DOM",
+      "Tailwind CSS",
+      "Axios",
+      "Typescript",
+      "React Hot Toast",
+      "Node js",
+      "Express",
+      "Socket.io",
+      "MongoDB",
+      "JWT",
+      "Cloudinary",
+    ],
+    demo: "https://react-chat-w4wh.onrender.com/",
+    code: "https://github.com/Lainercaceres11/react-chat",
+  },
+  {
+    title: "Cine flix",
+    description:
+      "Aplicación web inspirada en plataformas de streaming como Netflix, desarrollada con React y TypeScript. Permite explorar películas y series, ver tendencias, reproducir trailers y guardar contenido en una lista personalizada.",
+    stack: [
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "React Query",
+      "Talwind css",
+      "React router dom",
+      "Zustand",
+      "Swiper",
+      "Lucide React",
+      "TMDB API",
+    ],
+    demo: "https://cine-flix-lainer.netlify.app/",
+    code: "https://github.com/Lainercaceres11/netflix-clone-react",
+  },
+  {
+    title: "IMDB Clone",
+    description:
+      "Clon de la interfaz de IMDB con funcionalidades de búsqueda, visualización de películas, autentificación y gestión de favoritos.",
+    stack: ["Next JS", "MongoDB", "Typescript", "Tailwind CSS", "Clerk Auth"],
+    demo: "https://imdb-clone-nine-lake.vercel.app/",
+    code: "https://github.com/Lainercaceres11/imdb-clone",
+  },
+  {
+    title: "Travel APP",
+    description:
+      "Una plataforma para crear, planificar y organizar viajes personalizados con recomendaciones de destinos, itinerarios y gestión de reservas.",
+    stack: [
+      "Next JS",
+      "Next Auth",
+      "Tailwind CSS",
+      "React Leaflet",
+      "Typescript",
+      "Uploadthing",
+      "PostgreSQL",
+      "Prisma",
+    ],
+    demo: "https://travel-app-ten-sage.vercel.app/",
+    code: "https://github.com/Lainercaceres11/travel-app",
+  },
+  {
+    title: "Blog APP",
+    description:
+      "Una aplicación de blog que permite a los usuarios crear, editar y eliminar publicaciones, usa autenticación de usuarios y proporciona una interfaz intuitiva para la gestión de contenido. Tambien permite a los administradores gestionar usuarios.",
+    stack: [
+      "React",
+      "Tailwind CSS",
+      "Typescript",
+      "FastAPI",
+      "PostgreSQL",
+      "SQLAlchemy",
+      "JWT",
+    ],
+    demo: "https://fast-api-blog-front.vercel.app/",
+    code: "https://github.com/Lainercaceres11/fast-api-blog-front",
+  },
+  {
+    title: "Viche Purita",
+    description:
+      "Una landing page para la venta de viche artesanal, con funcionalidades de catálogo de productos, comprar por WhatsApp. La página está optimizada para SEO y es totalmente responsive, adaptándose a diferentes dispositivos y tamaños de pantalla.",
+    stack: ["Astro", "Modern css"],
+    demo: "https://www.vichepurita.com/",
+  },
+];
 ---
 
 <section class="projects" id={id}>
   <span class="u-subtitle">Proyectos</span>
   <h2 class="u-title">Trabajos recientes</h2>
+
   <div class="projects-card__container">
-    <article class="projects-card">
-      <h3>Teslo Shop</h3>
-      <p>
-        Una tienda online de productos con funcionalidades de carrito de
-        compras, autentificación, ordenes y gestión de productos.
-      </p>
-      <div class="project-stack">
-        <ul>
-          <li>Next JS</li>
-          <li>Next Auth</li>
-          <li>Typescript</li>
-          <li>Tailwind CSS</li>
-          <li>Cloudinary</li>
-          <li>Swiper</li>
-          <li>PostgreSQL</li>
-          <li>Prisma</li>
-        </ul>
+    {
+      projects.map(({ title, description, stack, demo, code }) => (
+        <article class="projects-card">
+          <h3>{title}</h3>
+          <p>{description}</p>
 
-        <div class="project-link">
-          <a
-            href="https://teslo-shop-next-inky.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link__demo"
-          >
-            <div class="project-link_code">
-              <Icon name="view" size={24} />
-              <span>Demo</span>
-            </div></a
-          >
-          <a
-            href="https://github.com/Lainercaceres11/teslo-shop-next"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-link_code">
-              <Icon name="github" size={24} />
-              <span>Código</span>
+          <div class="project-stack">
+            <ul>
+              {stack.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+
+            <div class="project-link">
+              {demo && (
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="project-link__demo"
+                >
+                  <div class="project-link_code">
+                    <Icon name="view" size={24} />
+                    <span>Demo</span>
+                  </div>
+                </a>
+              )}
+
+              {code && (
+                <a
+                  href={code}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div class="project-link_code">
+                    <Icon name="github" size={24} />
+                    <span>Código</span>
+                  </div>
+                </a>
+              )}
             </div>
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="projects-card">
-      <h3>Chat Fullstack App</h3>
-      <p>
-        Aplicación web de chat en tiempo real desarrollada con React +
-        TypeScript en el frontend y Node.js + Express en el backend, utilizando
-        Socket.io para comunicación en tiempo real. Incluye sistema de
-        autenticación, chats privados, estado de usuarios en línea y mensajería
-        instantánea.
-      </p>
-      <div class="project-stack">
-        <ul>
-          <li>React JS</li>
-          <li>React DOM</li>
-          <li>Tailwind CSS</li>
-          <li>Axios</li>
-          <li>Typescript</li>
-          <li>React Hot Toast</li>
-          <li>Node js</li>
-          <li>Express</li>
-          <li>Socket.io</li>
-          <li>MongoDB</li>
-          <li>JWT</li>
-          <li>Cloudinary</li>
-        </ul>
-
-        <div class="project-link">
-          <a
-            href="https://react-chat-w4wh.onrender.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link__demo"
-          >
-            <div class="project-link_code">
-              <Icon name="view" size={24} />
-              <span>Demo</span>
-            </div></a
-          >
-          <a
-            href="https://github.com/Lainercaceres11/react-chat"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-link_code">
-              <Icon name="github" size={24} />
-              <span>Código</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="projects-card">
-      <h3>Countries explorer</h3>
-      <p>
-        Una aplicación de exploración de lugares que permite explorar países,
-        filtrarlos por región y descubrir lugares cercanos como restaurantes,
-        hoteles y parques.
-      </p>
-      <div class="project-stack">
-        <ul>
-          <li>React</li>
-          <li>Typescript</li>
-          <li>Tailwind CSS</li>
-          <li>React Query</li>
-          <li>Talwind css</li>
-          <li>React router dom</li>
-        </ul>
-
-        <div class="project-link">
-          <a
-            href="https://countries-explorer-lainer.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link__demo"
-          >
-            <div class="project-link_code">
-              <Icon name="view" size={24} />
-              <span>Demo</span>
-            </div></a
-          >
-          <a
-            href="https://github.com/Lainercaceres11/places-country"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-link_code">
-              <Icon name="github" size={24} />
-              <span>Código</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="projects-card">
-      <h3>Cine flix</h3>
-      <p>
-        Aplicación web inspirada en plataformas de streaming como Netflix,
-        desarrollada con React y TypeScript. Permite explorar películas y
-        series, ver tendencias, reproducir trailers y guardar contenido en una
-        lista personalizada.
-      </p>
-      <div class="project-stack">
-        <ul>
-          <li>React</li>
-          <li>Typescript</li>
-          <li>Tailwind CSS</li>
-          <li>React Query</li>
-          <li>Talwind css</li>
-          <li>React router dom</li>
-          <li>Zustand</li>
-          <li>Swiper</li>
-          <li>Lucide React</li>
-          <li>TMDB API</li>
-        </ul>
-
-        <div class="project-link">
-          <a
-            href="https://cine-flix-lainer.netlify.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link__demo"
-          >
-            <div class="project-link_code">
-              <Icon name="view" size={24} />
-              <span>Demo</span>
-            </div></a
-          >
-          <a
-            href="https://github.com/Lainercaceres11/netflix-clone-react"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-link_code">
-              <Icon name="github" size={24} />
-              <span>Código</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="projects-card">
-      <h3>IMDB Clone</h3>
-      <p>
-        Clon de la interfaz de IMDB con funcionalidades de búsqueda,
-        visualización de películas, autentificación y gestión de favoritos.
-      </p>
-      <div class="project-stack">
-        <ul>
-          <li>Next JS</li>
-          <li>MongoDB</li>
-          <li>Typescript</li>
-          <li>Tailwind CSS</li>
-          <li>Clerk Auth</li>
-        </ul>
-
-        <div class="project-link">
-          <a
-            href="https://imdb-clone-nine-lake.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link__demo"
-          >
-            <div class="project-link_code">
-              <Icon name="view" size={24} />
-              <span>Demo</span>
-            </div></a
-          >
-          <a
-            href="https://github.com/Lainercaceres11/imdb-clone"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-link_code">
-              <Icon name="github" size={24} />
-              <span>Código</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </article>
-
-    <article class="projects-card">
-      <h3>Travel APP</h3>
-      <p>
-        Una plataforma para crear, planificar y organizar viajes personalizados
-        con recomendaciones de destinos, itinerarios y gestión de reservas.
-      </p>
-      <div class="project-stack">
-        <ul>
-          <li>Next JS</li>
-          <li>Next Auth</li>
-          <li>Tailwind CSS</li>
-          <li>React Leaflet</li>
-          <li>Typescript</li>
-          <li>Uploadthing</li>
-          <li>PostgreSQL</li>
-          <li>Prisma</li>
-        </ul>
-
-        <div class="project-link">
-          <a
-            href="https://travel-app-ten-sage.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="project-link__demo"
-          >
-            <div class="project-link_code">
-              <Icon name="view" size={24} />
-              <span>Demo</span>
-            </div></a
-          >
-          <a
-            href="https://github.com/Lainercaceres11/travel-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="project-link_code">
-              <Icon name="github" size={24} />
-              <span>Código</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </article>
+          </div>
+        </article>
+      ))
+    }
   </div>
 </section>
