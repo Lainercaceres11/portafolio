@@ -17,7 +17,6 @@
     .banner-subtitle {
         font-size: clamp(2.5rem, 5vw, 5rem);
         max-width: 20ch;
-        font-family: Georgia, 'Times New Roman', Times, serif;
 
         span {
             color: var(--sidebar-ring);

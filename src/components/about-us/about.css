@@ -18,7 +18,6 @@
 .about-subtitle {
     text-align: center;
     font-size: clamp(1.5rem, 4vw, 3rem);
-    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 
