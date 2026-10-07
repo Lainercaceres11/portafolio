@@ -3,27 +3,31 @@ import ToggleDarkMode from "../ToggleDarkMode.astro";
 import "./navbar.css";
 ---
 
-<nav>
+<nav class="navbar-shell" aria-label="Navegación principal">
   <div class="navbar">
-    <a href="#" class="navbar-brand">
+    <a href="#" class="navbar-brand" aria-label="LainerDev, inicio">
       <span><span class="navbar-text__dev">Lainer</span>Dev</span>
     </a>
 
-    <ul class="navbar-link">
+    <ul class="navbar-link" id="primary-navigation">
       <li><a href="#">Inicio</a></li>
       <li><a href="#about">Sobre mí</a></li>
       <li><a href="#projects">Proyectos</a></li>
       <li><a href="#stack">Habilidades</a></li>
       <li><a href="#education">Educación</a></li>
     </ul>
-    <div class="navbar-overlay"></div>
     <div class="navbar-actions">
       <a
         target="_blank"
         href="https://wa.me/573146486981"
         class="btn-primary navbar-button">Hablemos</a
       >
-      <button class="navbar-btn-hamburguer" aria-label="Toggle menu">
+      <button
+        class="navbar-btn-hamburguer"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
@@ -42,6 +46,7 @@ import "./navbar.css";
       <ToggleDarkMode />
     </div>
   </div>
+  <div class="navbar-overlay"></div>
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
@@ -51,15 +56,26 @@ import "./navbar.css";
 
       const navbarLink = document.querySelector(".navbar-link");
       const allLinks = document.querySelectorAll(".navbar-link li a");
+      const overlay = document.querySelector(".navbar-overlay");
 
       navbarBtnHamburguer?.addEventListener("click", () => {
-        navbarLink?.classList.toggle("active");
+        const isOpen = navbarLink?.classList.toggle("active") ?? false;
+        overlay?.classList.toggle("active", isOpen);
+        navbarBtnHamburguer.setAttribute("aria-expanded", String(isOpen));
       });
 
       allLinks.forEach((link) => {
         link.addEventListener("click", () => {
           navbarLink?.classList.remove("active");
+          overlay?.classList.remove("active");
+          navbarBtnHamburguer?.setAttribute("aria-expanded", "false");
         });
+      });
+
+      overlay?.addEventListener("click", () => {
+        navbarLink?.classList.remove("active");
+        overlay.classList.remove("active");
+        navbarBtnHamburguer?.setAttribute("aria-expanded", "false");
       });
     });
   </script>

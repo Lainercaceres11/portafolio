@@ -1,47 +1,241 @@
 .banner {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 2rem 1rem;
-    margin-bottom: 2.5rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 7vw, 6rem);
+  min-height: min(690px, calc(100svh - 5rem));
+  padding: 3.5rem 0 5rem;
+}
 
-    .banner-title {
-        text-transform: uppercase;
-        color: var(--primary);
-    }
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
 
-    .banner-description {
-        max-width: 75ch;
-    }
+.banner-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
 
-    .banner-subtitle {
-        font-size: clamp(2.5rem, 5vw, 5rem);
-        max-width: 20ch;
+.banner-title::before {
+  width: 1.6rem;
+  height: 1px;
+  background: var(--accent);
+  content: "";
+}
 
-        span {
-            color: var(--sidebar-ring);
-        }
-    }
+.banner-subtitle {
+  max-width: 13ch;
+  margin: 1.25rem 0;
+  font-size: clamp(2.8rem, 6.1vw, 5.3rem);
+  line-height: 1.02;
+  letter-spacing: -0.075em;
+}
 
-    .banner-actions {
-        margin-top: 0.8rem;
-        display: flex;
-        gap: 1rem;
+.banner-subtitle span {
+  color: var(--primary);
+}
 
-        a {
-            text-decoration: none;
-        }
+.banner-description {
+  max-width: 56ch;
+  color: var(--muted-foreground);
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.85;
+}
 
-        .btn-cv {
-            background-color: var(--background);
-            color: var(--foreground);
-            border: 2px solid var(--border);
-            transition: background-color 0.3s ease;
+.banner-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
 
-            &:hover {
-                background-color: var(--secondary);
+.banner-actions .btn-cv {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--foreground);
+}
 
-            }
-        }
-    }
+.banner-actions .btn-cv:hover {
+  background: var(--secondary);
+  box-shadow: none;
+}
+
+.banner-note {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+  color: var(--muted-foreground);
+  font-size: 0.87rem;
+}
+
+.banner-note span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #53a77d;
+  box-shadow: 0 0 0 4px color-mix(in srgb, #53a77d 15%, transparent);
+}
+
+.banner-visual {
+  position: relative;
+  display: grid;
+  min-height: 410px;
+  place-items: center;
+}
+
+.visual-orbit {
+  position: absolute;
+  width: min(100%, 390px);
+  aspect-ratio: 1;
+  border: 1px solid color-mix(in srgb, var(--primary) 14%, transparent);
+  border-radius: 50%;
+}
+
+.visual-orbit--inner {
+  width: 78%;
+  border-style: dashed;
+  transform: rotate(-20deg);
+}
+
+.visual-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 340px);
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--border) 78%, white);
+  border-radius: 1.4rem;
+  background: var(--card);
+  box-shadow: 0 30px 80px color-mix(in srgb, var(--foreground) 12%, transparent);
+  transform: rotate(3deg);
+}
+
+.visual-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 1.2rem;
+  color: var(--muted-foreground);
+  font-size: 0.74rem;
+}
+
+.visual-dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.visual-dots i {
+  width: 0.48rem;
+  height: 0.48rem;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.8;
+}
+
+.visual-dots i:nth-child(2) {
+  background: #d8b468;
+}
+
+.visual-dots i:nth-child(3) {
+  background: var(--primary);
+}
+
+.visual-card__body {
+  padding: 2.1rem 1.7rem 1.8rem;
+}
+
+.visual-card__eyebrow {
+  color: var(--muted-foreground);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.visual-card__monogram {
+  margin: 0.7rem 0;
+  color: var(--foreground);
+  font-size: clamp(4rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.1em;
+}
+
+.visual-card__monogram span {
+  color: var(--accent);
+}
+
+.visual-card__rule {
+  width: 100%;
+  height: 1px;
+  margin: 1.3rem 0;
+  background: var(--border);
+}
+
+.visual-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.visual-card__tags span {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.4rem 0.65rem;
+  color: var(--secondary-foreground);
+  font-size: 0.72rem;
+}
+
+.visual-spark {
+  position: absolute;
+  color: var(--accent);
+}
+
+.visual-spark--one {
+  top: 14%;
+  right: 13%;
+  font-size: 2.5rem;
+}
+
+.visual-spark--two {
+  bottom: 13%;
+  left: 8%;
+  color: var(--primary);
+  font-size: 1.7rem;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    min-height: auto;
+    padding: 3.5rem 0 2.5rem;
+  }
+
+  .banner-subtitle {
+    max-width: 15ch;
+    font-size: clamp(2.8rem, 11vw, 4.5rem);
+  }
+
+  .banner-visual {
+    min-height: 340px;
+  }
+}
+
+@media (max-width: 420px) {
+  .banner-visual {
+    min-height: 300px;
+  }
+
+  .visual-card {
+    width: 88%;
+  }
 }

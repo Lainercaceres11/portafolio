@@ -1,19 +1,23 @@
+.footer {
+    width: min(100% - 2.5rem, 1120px);
+    margin: 0 auto;
+}
+
 .footer-container {
     display: grid;
-    justify-items: center;
-    place-items: center;
+    justify-items: start;
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
-    gap: 0.5rem;
+    gap: 2rem;
     border-bottom: 2px solid var(--border);
-    min-height: 350px;
-    padding: 0.5rem 2.5rem;
+    min-height: 260px;
+    padding: 2.5rem 0;
 }
 
 .footer-item {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    min-height: 200px;
+    gap: 0.7rem;
+    min-height: 150px;
 
     a {
         text-decoration: none;
@@ -25,10 +29,18 @@
     }
 
     h2 {
-        font-size: clamp(0.6rem, 4vw, 1rem);
+        font-size: 0.78rem;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 0.12em;
+        color: var(--primary);
     }
+}
+
+.footer-item > p {
+    max-width: 32ch;
+    color: var(--muted-foreground);
+    font-size: 0.9rem;
+    line-height: 1.7;
 }
 
 .footer-navigation ul {
@@ -44,7 +56,7 @@
     gap: 0.5rem;
 
     div {
-        background-color: var(--border);
+        background-color: var(--secondary);
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -55,8 +67,9 @@
 }
 
 .footer-top {
-    padding: 0.5rem 2.5rem;
-    margin-top: 0.8rem;
+    padding: 1rem 0 1.5rem;
+    color: var(--muted-foreground);
+    font-size: 0.82rem;
 }
 
 .u-flex {
@@ -67,6 +80,6 @@
 @media (max-width: 768px) {
     .footer-container {
         justify-items: start;
-        gap: 0;
+        gap: 1.5rem;
     }
 }
