@@ -44,32 +44,25 @@ const projects = [
     code: "https://github.com/Lainercaceres11/react-chat",
   },
   {
-    title: "Cine flix",
+    title: "Klip Barber",
     description:
-      "Aplicación web inspirada en plataformas de streaming como Netflix, desarrollada con React y TypeScript. Permite explorar películas y series, ver tendencias, reproducir trailers y guardar contenido en una lista personalizada.",
+      "Aplicación web para reservar y gestionar citas para una peluquería; incluye autenticación y manejo de roles.",
     stack: [
       "React",
-      "Typescript",
+      "Rect Router",
       "Tailwind CSS",
-      "React Query",
-      "Talwind css",
-      "React router dom",
-      "Zustand",
-      "Swiper",
-      "Lucide React",
-      "TMDB API",
+      "Node",
+      "Typescript",
+      "Node JS",
+      "JWT",
+      "Cloudinary",
+      "PostgreSQL",
+      "Sequelize",
     ],
-    demo: "https://cine-flix-lainer.netlify.app/",
-    code: "https://github.com/Lainercaceres11/netflix-clone-react",
+    demo: "https://barber-reservation-frontend.vercel.app/",
+    code: "https://github.com/Lainercaceres11/barber-reservation-frontend-",
   },
-  {
-    title: "IMDB Clone",
-    description:
-      "Clon de la interfaz de IMDB con funcionalidades de búsqueda, visualización de películas, autentificación y gestión de favoritos.",
-    stack: ["Next JS", "MongoDB", "Typescript", "Tailwind CSS", "Clerk Auth"],
-    demo: "https://imdb-clone-nine-lake.vercel.app/",
-    code: "https://github.com/Lainercaceres11/imdb-clone",
-  },
+
   {
     title: "Travel APP",
     description:
@@ -110,6 +103,33 @@ const projects = [
     stack: ["Astro", "Modern css"],
     demo: "https://www.vichepurita.com/",
   },
+  {
+    title: "Cine flix",
+    description:
+      "Aplicación web inspirada en plataformas de streaming como Netflix, desarrollada con React y TypeScript. Permite explorar películas y series, ver tendencias, reproducir trailers y guardar contenido en una lista personalizada.",
+    stack: [
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "React Query",
+      "Talwind css",
+      "React router dom",
+      "Zustand",
+      "Swiper",
+      "Lucide React",
+      "TMDB API",
+    ],
+    demo: "https://cine-flix-lainer.netlify.app/",
+    code: "https://github.com/Lainercaceres11/netflix-clone-react",
+  },
+  {
+    title: "IMDB Clone",
+    description:
+      "Clon de la interfaz de IMDB con funcionalidades de búsqueda, visualización de películas, autentificación y gestión de favoritos.",
+    stack: ["Next JS", "MongoDB", "Typescript", "Tailwind CSS", "Clerk Auth"],
+    demo: "https://imdb-clone-nine-lake.vercel.app/",
+    code: "https://github.com/Lainercaceres11/imdb-clone",
+  },
 ];
 ---
 
@@ -147,11 +167,7 @@ const projects = [
               )}
 
               {code && (
-                <a
-                  href={code}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={code} target="_blank" rel="noopener noreferrer">
                   <div class="project-link_code">
                     <Icon name="github" size={24} />
                     <span>Código</span>
